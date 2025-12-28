@@ -4,7 +4,10 @@ const UserDetails = async ({ params }: { params: Promise<{ id: string, userId: s
     // Page params
     const { id, userId } = await params;
 
+    // throw new Error("Failed to fetch user");
+    // useEffect(() => {
 
+    // }, [])
 
     return (
         <div>
