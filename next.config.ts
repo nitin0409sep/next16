@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     turbopackFileSystemCacheForDev: true,
   },
   cacheComponents: true, // By default it's false 
-  crossOrigin: 'anonymous'
+  // crossOrigin: 'anonymous'
 };
 
 export default nextConfig;
