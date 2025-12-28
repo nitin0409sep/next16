@@ -1,3 +1,5 @@
+import { cacheTag, revalidateTag } from "next/cache";
+
 type TPost = {
     userId: string | number;
     id: number | string;
@@ -6,6 +8,8 @@ type TPost = {
 };
 
 export default async function User() {
+    'use cache'
+    cacheTag('user-data');
     const data = await fetch("http://localhost:3000/api/books");
     console.log(data);
     const postsData = await data.json();
@@ -25,6 +29,7 @@ export default async function User() {
                     </div>
                 );
             })}
+
         </div>
     );
 }
